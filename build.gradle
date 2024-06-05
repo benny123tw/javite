@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    // kotlinVersion is managed in gradle.properties
+    id 'org.jetbrains.kotlin.plugin.serialization' version "${kotlinVersion}" apply false
+}
+
+description = 'Vite Integration'
+
+configure(allprojects) { project ->
+    group = 'io.github.benny123tw'
+    repositories {
+        mavenCentral()
+    }
+}
+
+configure(allprojects) { project ->
+    apply plugin: 'java'
+
+    dependencies {
+        testImplementation platform('org.junit:junit-bom:5.10.0')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
