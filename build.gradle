@@ -15,6 +15,8 @@ configure(allprojects) { project ->
 
 configure(allprojects) { project ->
     apply plugin: 'java'
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
 
     dependencies {
         testImplementation platform('org.junit:junit-bom:5.10.0')
