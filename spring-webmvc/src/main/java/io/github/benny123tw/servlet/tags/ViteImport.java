@@ -8,14 +8,13 @@ import jakarta.servlet.jsp.JspException;
 import jakarta.servlet.jsp.JspWriter;
 import jakarta.servlet.jsp.PageContext;
 import jakarta.servlet.jsp.tagext.SimpleTagSupport;
+import java.io.File;
+import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-
-import java.io.File;
-import java.io.IOException;
 
 /**
  * Custom JSP tag to import Vite-generated assets.
@@ -68,6 +67,7 @@ public class ViteImport extends SimpleTagSupport {
 
     /**
      * Sets the debug flag.
+     *
      * @param isDebug the debug flag
      */
     public void setDebug(boolean isDebug) {
@@ -76,6 +76,7 @@ public class ViteImport extends SimpleTagSupport {
 
     /**
      * Sets the resource path.
+     *
      * @param resourcePath the resource path
      */
     public void setResourcePath(String resourcePath) {
@@ -90,12 +91,11 @@ public class ViteImport extends SimpleTagSupport {
      */
     @Override
     public void doTag() throws JspException, IOException {
+        log.info("doTag() called");
+
         ServletContext servletContext = ((PageContext) getJspContext()).getServletContext();
         WebApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(servletContext);
         JspWriter out = getJspContext().getOut();
-
-        log.info("doTag() called");
-        log.info("out: {}", out);
 
         if (ctx == null) {
             log.error("No WebApplicationContext found");
@@ -110,9 +110,8 @@ public class ViteImport extends SimpleTagSupport {
         String effectiveResourcePath = resourcePath != null ? resourcePath : viteProperties.getResourcePath();
 
         log.info("isDebug: {}", isDebug);
-        log.info("effectiveManifestPath: {}", effectiveManifestPath);
-        log.info("effectiveLocalServerUrl: {}", effectiveLocalServerUrl);
-        log.info("effectiveResourcePath: {}", effectiveResourcePath);
+        log.debug("effectiveManifestPath: {}, effectiveLocalServerUrl: {}, effectiveResourcePath: {}", effectiveManifestPath, effectiveLocalServerUrl,
+                effectiveResourcePath);
 
         if (isDebug) {
             log.info("Handling development environment");
@@ -136,7 +135,7 @@ public class ViteImport extends SimpleTagSupport {
      */
     private void handleProdEnvironment(JspWriter out, ServletContext servletContext, String manifestFilePath, String resourcePath) throws IOException {
         File manifestFile = new File(servletContext.getRealPath(manifestFilePath));
-        log.info("Looking for manifest file at: {}", manifestFile.getAbsolutePath());
+        log.debug("Looking for manifest file at: {}", manifestFile.getAbsolutePath());
         if (manifestFile.exists()) {
             ObjectMapper mapper = new ObjectMapper();
             JsonNode manifest = mapper.readTree(manifestFile);
@@ -174,7 +173,7 @@ public class ViteImport extends SimpleTagSupport {
     private void printJsImport(JspWriter out, ServletContext servletContext, JsonNode entryNode, String resourcePath) throws IOException {
         String jsFile = entryNode.get("file").asText();
         String contextPath = servletContext.getContextPath();
-        log.info("Printing JS import: {}", jsFile);
+        log.debug("Printing JS import: {}", jsFile);
         out.print("<script type=\"module\" src=\"" + contextPath + resourcePath + "/" + jsFile + "\" defer></script>");
         log.info("JS import printed");
     }
@@ -193,8 +192,9 @@ public class ViteImport extends SimpleTagSupport {
         if (cssFiles != null) {
             String contextPath = servletContext.getContextPath();
             for (JsonNode cssFile : cssFiles) {
-                log.info("Printing CSS import: {}", cssFile.asText());
+                log.debug("Printing CSS import: {}", cssFile.asText());
                 out.print("<link rel=\"stylesheet\" href=\"" + contextPath + resourcePath + "/" + cssFile.asText() + "\"/>");
+                log.info("CSS import printed");
             }
         }
     }

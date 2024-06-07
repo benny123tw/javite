@@ -1,14 +1,16 @@
 package io.github.benny123tw.servlet;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import io.github.benny123tw.servlet.config.ViteProperties;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest(classes = TestApplication.class)
+@ActiveProfiles("default")
 public class ViteDefaultPropertiesTest {
 
     private final ViteProperties viteProperties;
@@ -24,4 +26,5 @@ public class ViteDefaultPropertiesTest {
         assertEquals("/WEB-INF/dist/.vite/manifest.json", viteProperties.getManifestPath());  // Default value
         assertEquals("http://localhost:5173", viteProperties.getLocalServerUrl());  // Default value
     }
+
 }

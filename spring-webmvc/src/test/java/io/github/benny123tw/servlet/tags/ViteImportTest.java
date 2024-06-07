@@ -1,8 +1,11 @@
 package io.github.benny123tw.servlet.tags;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import io.github.benny123tw.servlet.TestApplication;
 import jakarta.servlet.jsp.JspWriter;
 import jakarta.servlet.jsp.PageContext;
+import java.io.StringWriter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -13,16 +16,17 @@ import org.springframework.mock.web.MockJspWriter;
 import org.springframework.mock.web.MockPageContext;
 import org.springframework.web.context.WebApplicationContext;
 
-import java.io.StringWriter;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 @SpringBootTest(classes = TestApplication.class)
 public class ViteImportTest {
 
     private static final Logger log = LoggerFactory.getLogger(ViteImportTest.class);
+
+    private final WebApplicationContext webApplicationContext;
+
     @Autowired
-    private WebApplicationContext webApplicationContext;
+    public ViteImportTest(WebApplicationContext webApplicationContext) {
+        this.webApplicationContext = webApplicationContext;
+    }
 
     private PageContext pageContext;
     private StringWriter stringWriter;
