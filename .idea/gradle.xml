@@ -9,7 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/spring-webmvc" />
+            <option value="$PROJECT_DIR$/vite-spring-webmvc" />
           </set>
         </option>
       </GradleProjectSettings>

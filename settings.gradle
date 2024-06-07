@@ -4,10 +4,10 @@ plugins {
     id "org.gradle.toolchains.foojay-resolver-convention" version "0.7.0"
 }
 
-include 'spring-webmvc'
+include 'vite-spring-webmvc'
 
 rootProject.name = 'vite-integration'
-rootProject.children.each {project ->
+rootProject.children.each { project ->
     project.buildFileName = "${project.name}.gradle"
 }
 
@@ -26,4 +26,3 @@ settings.gradle.projectsLoaded {
         }
     }
 }
-
