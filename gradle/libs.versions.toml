@@ -1,0 +1,36 @@
+[versions]
+springframework = "6.1.8"
+springframework_boot = "3.3.0"
+spring_dependency_management = "1.1.5"
+jackson_core = "2.17.1"
+jarkata_servlet = "6.1.0-M2"
+jarkata_servlet_jsp = "4.0.0-M2"
+junit = "5.10.2"
+assertj = "3.26.0"
+testcontainers = "1.19.8"
+publish_plugin = "2.0.0"
+release_plugin = "3.0.2"
+
+[libraries]
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit_bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+testcontainers = { module = "org.testcontainers:testcontainers", version.ref = "testcontainers" }
+testcontainers_junit5 = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+spring_core = { module = "org.springframework:spring-core", version.ref = "springframework" }
+spring_webmvc = { module = "org.springframework:spring-webmvc", version.ref = "springframework" }
+spring_boot_starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springframework_boot" }
+spring_boot_starter_web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springframework_boot" }
+spring_boot_starter_test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springframework_boot" }
+jackson_databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson_core" }
+jakarta_servlet = { module = "jakarta.servlet:jakarta.servlet-api", version.ref = "jarkata_servlet" }
+jakarta_servlet_jsp = { module = "jakarta.servlet.jsp:jakarta.servlet.jsp-api", version.ref = "jarkata_servlet_jsp" }
+
+[bundles]
+testcontainers_junit = ["testcontainers", "testcontainers_junit5"]
+
+[plugins]
+spring_boot = { id = "org.springframework.boot", version.ref = "springframework_boot" }
+spring_dependency_management = { id = "io.spring.dependency-management", version.ref = "spring_dependency_management" }
+publish = { id = "io.github.gradle-nexus.publish-plugin", version.ref = "publish_plugin" }
+release = { id = "net.researchgate.release", version.ref = "release_plugin" }
