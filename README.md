@@ -35,6 +35,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Acknowledgements
 
+This project was inspired by the following resources:
+
+- [Java Library Template](https://github.com/thriving-dev/java-library-template)
 - [Spring Framework](https://spring.io/projects/spring-framework)
 - [Vite](https://vitejs.dev/)
 - [Gradle](https://gradle.org/)
