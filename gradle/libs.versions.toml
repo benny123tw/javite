@@ -23,6 +23,7 @@ spring_webmvc = { module = "org.springframework:spring-webmvc", version.ref = "s
 spring_boot_starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springframework_boot" }
 spring_boot_starter_web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springframework_boot" }
 spring_boot_starter_test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springframework_boot" }
+spring_boot_configuration_processor = { module = "org.springframework.boot:spring-boot-configuration-processor", version.ref = "springframework_boot" }
 jackson_databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson_core" }
 jakarta_servlet = { module = "jakarta.servlet:jakarta.servlet-api", version.ref = "jarkata_servlet" }
 jakarta_servlet_jsp = { module = "jakarta.servlet.jsp:jakarta.servlet.jsp-api", version.ref = "jarkata_servlet_jsp" }

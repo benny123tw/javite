@@ -34,6 +34,7 @@ dependencies {
     implementation(libs.jackson.databind)
     implementation(libs.jakarta.servlet)
     implementation(libs.jakarta.servlet.jsp)
+    annotationProcessor(libs.spring.boot.configuration.processor)
 
     testImplementation(libs.spring.boot.starter.test)
     testImplementation(libs.junit)
