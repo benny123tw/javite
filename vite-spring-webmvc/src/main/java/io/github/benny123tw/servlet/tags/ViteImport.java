@@ -145,6 +145,8 @@ public class ViteImport extends SimpleTagSupport {
                 printJsImport(out, servletContext, entryNode, resourcePath);
                 printCssImports(out, servletContext, entryNode, resourcePath);
             }
+        } else {
+            log.error("Manifest file not found at: {}", manifestFile.getAbsolutePath());
         }
     }
 

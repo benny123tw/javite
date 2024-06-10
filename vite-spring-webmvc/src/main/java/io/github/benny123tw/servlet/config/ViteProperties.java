@@ -1,7 +1,9 @@
 package io.github.benny123tw.servlet.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
+@Component
 @ConfigurationProperties(prefix = "vite")
 public class ViteProperties {
 
