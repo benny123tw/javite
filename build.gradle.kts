@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.publish.maven)
 }
 
-description = "Vite Integration"
+description = "Java library for Vite integration."
 
 allprojects {
     group = "io.github.benny123tw"
@@ -21,12 +21,10 @@ mavenPublishing {
 }
 
 object Meta {
-    const val RELEASE = "https://s01.oss.sonatype.org/service/local/"
-    const val SNAPSHOT = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-    const val DESC = "Vite integration with Spring Web MVC."
+    const val DESC = "Java library for Vite integration."
     const val LICENSE = "MIT"
     const val LICENSE_URL = "https://opensource.org/licenses/mit"
-    const val GITHUB_REPO = "benny123tw/vite-integration"
+    const val GITHUB_REPO = "benny123tw/javite"
     const val DEVELOPER_ID = "benny123tw"
     const val DEVELOPER_NAME = "Benny Yen"
     const val DEVELOPER_ORGANIZATION = "io.github.benny123tw"
@@ -34,7 +32,7 @@ object Meta {
 }
 
 mavenPublishing {
-    println("Publish ${project.group.toString()}, ${project.name}, ${project.version.toString()}")
+    println("Publish ${project.group}, ${project.name}, ${project.version}")
     coordinates(project.group.toString(), project.name, project.version.toString())
 
     pom {

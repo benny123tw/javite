@@ -1,3 +1,3 @@
-rootProject.name = "vite-integration"
+rootProject.name = "JaVite"
 
 include("vite-spring-webmvc")

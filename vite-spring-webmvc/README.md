@@ -1,4 +1,4 @@
-# Vite Integration for JSP and Spring MVC
+# JaVite for JSP and Spring MVC
 
 This project provides a custom JSP tag for integrating Vite-generated assets with JSP and Spring MVC
 applications. It allows you to seamlessly import Vite-built JavaScript and CSS assets into your JSP

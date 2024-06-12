@@ -1,4 +1,4 @@
-# Vite Integration
+# JaVite
 
 This monorepo contains various submodules for integrating Vite with different frameworks and
 libraries. The primary focus is on modernizing legacy web applications by leveraging Vite's fast

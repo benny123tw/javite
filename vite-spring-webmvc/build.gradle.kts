@@ -2,23 +2,8 @@ import com.vanniktech.maven.publish.JavaLibrary
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.SonatypeHost
 
-object Meta {
-    const val RELEASE = "https://s01.oss.sonatype.org/service/local/"
-    const val SNAPSHOT = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-    const val DESC = "Vite integration with Spring Web MVC."
-    const val LICENSE = "MIT"
-    const val LICENSE_URL = "https://opensource.org/licenses/mit"
-    const val GITHUB_REPO = "benny123tw/vite-integration"
-    const val DEVELOPER_ID = "benny123tw"
-    const val DEVELOPER_NAME = "Benny Yen"
-    const val DEVELOPER_ORGANIZATION = "io.github.benny123tw"
-    const val DEVELOPER_ORGANIZATION_URL = "https://www.github.com/benny123tw"
-}
-
 plugins {
     `java-library`
-    `maven-publish`
-    signing
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.spring.dependency.management)
     alias(libs.plugins.publish.maven)
@@ -45,12 +30,6 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
-mavenPublishing {
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-
-    signAllPublications()
-}
-
 tasks.bootJar {
     enabled = false
 }
@@ -66,6 +45,23 @@ tasks.jar {
             ),
         )
     }
+}
+
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+
+    signAllPublications()
+}
+
+object Meta {
+    const val DESC = "Vite integration with Spring Web MVC."
+    const val LICENSE = "MIT"
+    const val LICENSE_URL = "https://opensource.org/licenses/mit"
+    const val GITHUB_REPO = "benny123tw/javite"
+    const val DEVELOPER_ID = "benny123tw"
+    const val DEVELOPER_NAME = "Benny Yen"
+    const val DEVELOPER_ORGANIZATION = "io.github.benny123tw"
+    const val DEVELOPER_ORGANIZATION_URL = "https://www.github.com/benny123tw"
 }
 
 mavenPublishing {
@@ -109,11 +105,6 @@ mavenPublishing {
         }
     }
 }
-
-// Ensure that generateMetadataFileForMavenPublication depends on the javadocJar task
-//tasks.named("generateMetadataFileForMavenPublication") {
-//    dependsOn(tasks.named("javadocJar"))
-//}
 
 // gradle locking of dependency versions
 //   *required+used for trivy scan
