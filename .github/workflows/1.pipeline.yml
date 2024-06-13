@@ -23,6 +23,10 @@ on:
 jobs:
 
     build:
+        permissions:
+            contents: read
+            checks: write
+            id-token: write
         name: Build + unit tests
         uses: ./.github/workflows/callable.build.yml
         if: | # avoid unnecessary pipeline runs during artifact release process ('gradle release plugin')
@@ -66,9 +70,9 @@ jobs:
             (
               github.event_name != 'workflow_dispatch'
               || inputs.type == '...no release'
-            ) && ( 
-              github.ref == 'refs/heads/main' 
-              || github.ref_type == 'tag' 
+            ) && (
+              github.ref == 'refs/heads/main'
+              || github.ref_type == 'tag'
             )
 
     publish_javadoc:
@@ -81,4 +85,4 @@ jobs:
             (
               github.ref == 'refs/heads/main'
               && ( inputs.type == '' || inputs.type == '...no release' )
-            ) || github.ref_type == 'tag' 
+            ) || github.ref_type == 'tag'
