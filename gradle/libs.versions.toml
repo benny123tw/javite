@@ -8,9 +8,8 @@ jarkata_servlet_jsp = "4.0.0-M2"
 junit = "5.10.2"
 assertj = "3.26.0"
 testcontainers = "1.19.8"
-publish_plugin = "2.0.0"
 publish_maven_plugin = "0.28.0"
-release_plugin = "3.0.2"
+dokka = "1.9.20"
 
 [libraries]
 junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
@@ -34,6 +33,6 @@ testcontainers_junit = ["testcontainers", "testcontainers_junit5"]
 [plugins]
 spring_boot = { id = "org.springframework.boot", version.ref = "springframework_boot" }
 spring_dependency_management = { id = "io.spring.dependency-management", version.ref = "spring_dependency_management" }
-publish = { id = "io.github.gradle-nexus.publish-plugin", version.ref = "publish_plugin" }
 publish_maven = { id = "com.vanniktech.maven.publish", version.ref = "publish_maven_plugin" }
-release = { id = "net.researchgate.release", version.ref = "release_plugin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+

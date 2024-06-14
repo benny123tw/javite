@@ -3,6 +3,8 @@ import com.vanniktech.maven.publish.SonatypeHost
 plugins {
     `java-library`
     alias(libs.plugins.publish.maven)
+    alias(libs.plugins.dokka)
+    kotlin("jvm") version "2.0.0" apply false
 }
 
 description = "Java library for Vite integration."
@@ -12,6 +14,20 @@ allprojects {
     repositories {
         mavenCentral()
     }
+}
+
+subprojects {
+    apply(plugin = "org.jetbrains.kotlin.jvm")
+    apply(plugin = "org.jetbrains.dokka")
+
+    tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+        dokkaSourceSets {
+            configureEach {
+                sourceRoots.from(file("src/main/java"))
+            }
+        }
+    }
+
 }
 
 mavenPublishing {

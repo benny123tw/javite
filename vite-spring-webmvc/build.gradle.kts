@@ -25,6 +25,16 @@ dependencies {
     testImplementation(libs.junit)
 }
 
+configurations.matching { it.name.startsWith("dokka") }.configureEach {
+    resolutionStrategy.eachDependency {
+        if (requested.group.startsWith("com.fasterxml.jackson")) {
+            // override jackson for Dokka as a workaround
+            // see: https://github.com/Kotlin/dokka/issues/3472
+            useVersion("2.15.3")
+        }
+    }
+}
+
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()

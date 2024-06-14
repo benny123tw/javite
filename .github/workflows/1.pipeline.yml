@@ -61,7 +61,7 @@ jobs:
     #      github.event_name == 'workflow_dispatch'
     #      && inputs.type != '...no release'
 
-    publish_sonatype:
+    publish_central_portal:
         name: Publish artifact (Maven Central)
         uses: ./.github/workflows/callable.publish-central-portal.yml
         secrets: inherit
@@ -75,11 +75,11 @@ jobs:
               || github.ref_type == 'tag'
             )
 
-    publish_javadoc:
-        name: Publish javadoc (GitHub Pages)
+    publish_dokka:
+        name: Publish dokka (GitHub Pages)
         permissions:
             contents: write
-        uses: ./.github/workflows/callable.publish-javadoc.yml
+        uses: ./.github/workflows/callable.publish-dokka.yml
         needs: build
         if: |
             (
