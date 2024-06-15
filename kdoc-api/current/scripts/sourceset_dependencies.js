@@ -1,1 +1,0 @@
-sourceset_dependencies = '{":vite-spring-webmvc:dokkaHtmlPartial/main":[]}'

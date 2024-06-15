@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"io.github.benny123tw.servlet.annotation","l":"EnableVite"},{"p":"io.github.benny123tw.servlet.config","l":"ViteConfig"},{"p":"io.github.benny123tw.servlet.tags","l":"ViteImport"},{"p":"io.github.benny123tw.servlet.config","l":"ViteProperties"}];updateSearchResults();

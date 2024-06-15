@@ -1,7 +1,0 @@
-$dokka.format:html-v1
-$dokka.linkExtension:html
-
-module:vite-spring-webmvc
-io.github.benny123tw.servlet.annotation
-io.github.benny123tw.servlet.config
-io.github.benny123tw.servlet.tags
