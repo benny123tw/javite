@@ -12,9 +12,11 @@ views, making it easier to modernize legacy web applications.
 
 ## Getting Started
 
+If you need Java 8 support, please use [vite-spring-webmvc-jre8](https://github.com/benny123tw/javite/tree/main/vite-spring-webmvc-jre8).
+
 ### Prerequisites
 
-- Java 8 or higher
+- Java 17 or higher
 - Spring MVC
 - Vite
 
@@ -23,18 +25,27 @@ views, making it easier to modernize legacy web applications.
 Add the following dependency to your Maven `pom.xml` file:
 
 ```xml
-
 <dependency>
     <groupId>io.github.benny123tw</groupId>
     <artifactId>vite-spring-webmvc</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
+</dependency>
+
+<!-- Java 8 support -->
+<dependency>
+    <groupId>io.github.benny123tw</groupId>
+    <artifactId>vite-spring-webmvc-jre8</artifactId>
+    <version>0.0.1</version>
 </dependency>
 ```
 
 Or for Gradle:
 
 ```groovy
-implementation 'io.github.benny123tw:vite-spring-webmvc:1.0.0'
+implementation 'io.github.benny123tw:vite-spring-webmvc:0.0.1'
+
+// Java 8 support
+implementation 'io.github.benny123tw:vite-spring-webmvc-jre8:0.0.1'
 ```
 
 ### Configuration
@@ -95,6 +106,34 @@ public class WebConfig implements WebMvcConfigurer {
 }
 ```
 
+#### Enable Vite Configuration
+
+Configure your Spring application to enable Vite:
+
+```java
+import io.github.benny123tw.servlet.annotation.EnableVite;
+
+@Configuration
+@ComponentScan(basePackages = "com.benny",
+        includeFilters = @Filter(type = FilterType.ANNOTATION, value = Configuration.class))
+@EnableVite
+public class AppConfig {
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+
+    @Configuration
+    @Profile("dev")
+    @PropertySource("classpath:application-dev.properties")
+    static class DevConfig {
+
+    }
+
+}
+```
+
 #### Using the `ViteImport` Tag in JSP
 
 Add the taglib declaration to your JSP file and use the `vite:import` tag to include Vite assets:
@@ -113,6 +152,8 @@ Add the taglib declaration to your JSP file and use the `vite:import` tag to inc
 </body>
 </html>
 ```
+
+Full example available on [benny123tw/vite-jsp-demo](https://github.com/benny123tw/vite-jsp-demo).
 
 ## Contributing
 

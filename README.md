@@ -1,12 +1,10 @@
 # JaVite
 
-This monorepo contains various submodules for integrating Vite with different frameworks and
-libraries. The primary focus is on modernizing legacy web applications by leveraging Vite's fast
-build capabilities.
+This monorepo contains various submodules for integrating Vite with different frameworks and libraries, focusing on modernizing legacy web applications with Vite's fast build capabilities.
 
 ## Project Structure
 
-The monorepo is organized into the following submodules:
+The monorepo includes the following submodules:
 
 - **vite-spring-webmvc**: Integrates Vite with JSP and Spring MVC applications.
 
