@@ -1,4 +1,13 @@
 [versions]
+# JRE 8
+jre8_springframework = "5.3.15"
+jre8_springframework_boot = "2.6.3"
+jre8_spring_dependency_management = "1.0.11.RELEASE"
+jre8_jackson_core = "2.13.0"
+jre8_javax_servlet = "4.0.1"
+jre8_javax_servlet_jsp = "2.3.3"
+
+# JRE 17
 springframework = "6.1.8"
 springframework_boot = "3.3.0"
 spring_dependency_management = "1.1.5"
@@ -12,6 +21,17 @@ publish_maven_plugin = "0.28.0"
 dokka = "1.9.20"
 
 [libraries]
+# JRE 8
+jre8_spring_core = { module = "org.springframework:spring-core", version.ref = "jre8_springframework" }
+jre8_spring_webmvc = { module = "org.springframework:spring-webmvc", version.ref = "jre8_springframework" }
+jre8_spring_boot_starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "jre8_springframework_boot" }
+jre8_spring_boot_starter_web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "jre8_springframework_boot" }
+jre8_spring_boot_starter_test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "jre8_springframework_boot" }
+jre8_spring_boot_configuration_processor = { module = "org.springframework.boot:spring-boot-configuration-processor", version.ref = "jre8_springframework_boot" }
+jre8_jackson_databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jre8_jackson_core" }
+jre8_javax_servlet = { module = "javax.servlet:javax.servlet-api", version.ref = "jre8_javax_servlet" }
+jre8_javax_servlet_jsp = { module = "javax.servlet.jsp:javax.servlet.jsp-api", version.ref = "jre8_javax_servlet_jsp" }
+
 junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 junit_bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
