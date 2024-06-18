@@ -1,4 +1,4 @@
-name: ">> Scheduled Code Analysis"
+name: "Scheduled Code Analysis"
 
 on:
     workflow_dispatch:

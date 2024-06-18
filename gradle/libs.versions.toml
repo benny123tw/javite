@@ -2,12 +2,12 @@
 # JRE 8
 jre8_springframework = "5.3.15"
 jre8_springframework_boot = "2.6.3"
-jre8_spring_dependency_management = "1.0.11.RELEASE"
 jre8_jackson_core = "2.13.0"
 jre8_javax_servlet = "4.0.1"
 jre8_javax_servlet_jsp = "2.3.3"
 
 # JRE 17
+dokka = "1.9.20"
 springframework = "6.1.8"
 springframework_boot = "3.3.0"
 spring_dependency_management = "1.1.5"
@@ -18,7 +18,6 @@ junit = "5.10.2"
 assertj = "3.26.0"
 testcontainers = "1.19.8"
 publish_maven_plugin = "0.28.0"
-dokka = "1.9.20"
 
 [libraries]
 # JRE 8
@@ -32,6 +31,7 @@ jre8_jackson_databind = { module = "com.fasterxml.jackson.core:jackson-databind"
 jre8_javax_servlet = { module = "javax.servlet:javax.servlet-api", version.ref = "jre8_javax_servlet" }
 jre8_javax_servlet_jsp = { module = "javax.servlet.jsp:javax.servlet.jsp-api", version.ref = "jre8_javax_servlet_jsp" }
 
+# JRE 17
 junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 junit_bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
@@ -55,4 +55,3 @@ spring_boot = { id = "org.springframework.boot", version.ref = "springframework_
 spring_dependency_management = { id = "io.spring.dependency-management", version.ref = "spring_dependency_management" }
 publish_maven = { id = "com.vanniktech.maven.publish", version.ref = "publish_maven_plugin" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
-

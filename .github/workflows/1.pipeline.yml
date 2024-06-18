@@ -1,4 +1,4 @@
-name: "> Main Pipeline"
+name: "Main Pipeline"
 
 on:
     push:
@@ -7,18 +7,6 @@ on:
             - '*'
     pull_request:
         branches: [ '*' ]
-#  workflow_dispatch:
-#    inputs:
-#      type:
-#        description: 'Release Library'
-#        required: true
-#        default: '...no release'
-#        type: choice
-#        options:
-#          - '...no release'
-#          - major
-#          - minor
-#          - patch
 
 jobs:
 
@@ -30,7 +18,7 @@ jobs:
         name: Build + unit tests
         uses: ./.github/workflows/callable.build.yml
         if: | # avoid unnecessary pipeline runs during artifact release process ('gradle release plugin')
-            !contains(github.event.head_commit.message, '[Gradle Release Plugin] - pre tag commit')
+            !contains(github.event.head_commit.message, 'chore: release v')
             || github.ref_type == 'tag'
 
     code_analysis:
@@ -49,17 +37,6 @@ jobs:
     #    name: Integration tests
     #    uses: ./.github/workflows/callable.integration-test.yml
     #    needs: build
-
-    #  gradle_release:
-    #    name: Create release
-    #    uses: ./.github/workflows/callable.gradle-release.yml
-    #    secrets: inherit
-    #    with:
-    #      type: ${{ inputs.type }}
-    #    needs: build
-    #    if: |
-    #      github.event_name == 'workflow_dispatch'
-    #      && inputs.type != '...no release'
 
     publish_central_portal:
         name: Publish artifact (Maven Central)
@@ -80,7 +57,7 @@ jobs:
         permissions:
             contents: write
         uses: ./.github/workflows/callable.publish-dokka.yml
-        needs: build
+        needs: [build, publish_central_portal]
         if: |
             (
               github.ref == 'refs/heads/main'
