@@ -90,7 +90,7 @@ mavenPublishing {
         name.set(project.name)
         description.set(Meta.DESC)
         inceptionYear.set("2024")
-        url.set(Meta.GITHUB_REPO)
+        url.set("https://github.com/${Meta.GITHUB_REPO}")
         licenses {
             license {
                 name.set(Meta.LICENSE)
