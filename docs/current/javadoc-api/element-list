@@ -1,0 +1,7 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+
+io.github.benny123tw.servlet.annotation
+io.github.benny123tw.servlet.config
+io.github.benny123tw.servlet.tags
+
