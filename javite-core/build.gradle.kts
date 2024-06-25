@@ -54,7 +54,7 @@ mavenPublishing {
 }
 
 object Meta {
-    const val DESC = "Vite integration with Spring Web MVC."
+    const val DESC = "Java Vite Core Library"
     const val LICENSE = "MIT"
     const val LICENSE_URL = "https://opensource.org/licenses/mit"
     const val GITHUB_REPO = "benny123tw/javite"
