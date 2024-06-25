@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_4_0.xsd"
+        version="3.1">
+
+    <description>Vite JSP Tag Library</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>vite</short-name>
+    <uri>https://javite.com</uri>
+
+    <tag>
+        <description>Import a Vite asset.</description>
+        <name>import</name>
+        <tag-class>com.javite.spring.tags.ViteImport</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <description>The entry point of the Vite asset to be imported.</description>
+            <name>entry</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The path to the Vite manifest file.</description>
+            <name>manifestPath</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The URL of the local Vite development server.</description>
+            <name>localServerUrl</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>Flag to indicate if the debug mode is enabled.</description>
+            <name>debug</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>The path to the public resources.</description>
+            <name>resourcePath</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>
