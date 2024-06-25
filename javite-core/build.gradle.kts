@@ -12,6 +12,7 @@ dependencies {
 
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit)
+    testImplementation(libs.assertj)
 }
 
 tasks.test {
