@@ -22,6 +22,7 @@ dependencies {
 
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit)
+    testImplementation(libs.spring.boot.starter.test)
 }
 
 tasks.test {
