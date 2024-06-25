@@ -18,6 +18,12 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 /**
  * Custom JSP tag to import Vite-generated assets.
+ * <p>
+ * This tag handles the inclusion of Vite-generated JavaScript and CSS assets in JSP pages, dynamically determining the correct assets based on the environment
+ * (development or production).
+ *
+ * @author Benny Yen
+ * @since 0.1.0
  */
 public class ViteImport extends SimpleTagSupport {
 
@@ -38,26 +44,57 @@ public class ViteImport extends SimpleTagSupport {
     @Nullable
     private String resourcePath;
 
+    /**
+     * Sets the entry point for the Vite assets.
+     *
+     * @param entry the entry point for the Vite assets
+     */
     public void setEntry(String entry) {
         this.entry = entry;
     }
 
+    /**
+     * Sets the path to the Vite manifest file.
+     *
+     * @param manifestPath the path to the Vite manifest file
+     */
     public void setManifestPath(String manifestPath) {
         this.manifestPath = manifestPath;
     }
 
+    /**
+     * Sets the URL for the local Vite development server.
+     *
+     * @param localServerUrl the URL for the local Vite development server
+     */
     public void setLocalServerUrl(String localServerUrl) {
         this.localServerUrl = localServerUrl;
     }
 
+    /**
+     * Sets the debug mode. If true, assets will be loaded from the local Vite development server.
+     *
+     * @param isDebug true for debug mode, false otherwise
+     */
     public void setDebug(boolean isDebug) {
         this.isDebug = isDebug;
     }
 
+    /**
+     * Sets the resource path for the Vite assets.
+     *
+     * @param resourcePath the resource path for the Vite assets
+     */
     public void setResourcePath(String resourcePath) {
         this.resourcePath = resourcePath;
     }
 
+    /**
+     * Processes the tag by determining the environment and including the appropriate assets.
+     *
+     * @throws JspException if an error occurs during JSP processing
+     * @throws IOException  if an I/O error occurs
+     */
     @Override
     public void doTag() throws JspException, IOException {
         ServletContext servletContext = ((PageContext) getJspContext()).getServletContext();

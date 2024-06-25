@@ -10,6 +10,7 @@ plugins {
 }
 
 description = "Vite - Spring Web MVC"
+group = "io.github.benny123tw"
 
 dependencies {
     implementation(libs.spring.core)

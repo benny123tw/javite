@@ -9,6 +9,8 @@ plugins {
     alias(libs.plugins.publish.maven)
 }
 
+group = "com.javite"
+
 dependencies {
     implementation(project(":javite-core"))
 

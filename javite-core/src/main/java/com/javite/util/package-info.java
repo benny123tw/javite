@@ -12,13 +12,13 @@
  * </ul>
  *
  * <p>Usage example:</p>
- * <pre class="code">
+ * <pre class="code"><code class="java">
  * // Reading the Vite manifest
  * JsonNode manifest = ManifestUtils.readManifest(manifestFilePath);
- * <p></p>
+ *
  * // Generating a script tag
  * String scriptTag = HtmlUtils.generateScriptTag("http://localhost:5173/src/main.js");
- * </pre>
+ * </code></pre>
  *
  * @see com.javite.util.ManifestUtils
  * @see com.javite.util.HtmlUtils

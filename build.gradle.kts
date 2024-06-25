@@ -8,9 +8,9 @@ plugins {
 }
 
 description = "Java library for Vite integration."
+group = "io.github.benny123tw"
 
 allprojects {
-    group = "io.github.benny123tw"
     repositories {
         mavenCentral()
     }

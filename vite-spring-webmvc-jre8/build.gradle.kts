@@ -8,6 +8,7 @@ plugins {
 }
 
 description = "Vite - Spring Web MVC for JRE 8"
+group = "io.github.benny123tw"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
