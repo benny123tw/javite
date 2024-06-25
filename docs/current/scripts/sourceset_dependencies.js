@@ -1,1 +1,1 @@
-sourceset_dependencies = '{":vite-spring-webmvc:dokkaHtmlPartial/main":[],":vite-spring-webmvc-jre8:dokkaHtmlPartial/main":[]}'
+sourceset_dependencies = '{":javite-core:dokkaHtmlPartial/main":[],":javite-webmvc:dokkaHtmlPartial/main":[],":javite-webmvc-jre8:dokkaHtmlPartial/main":[],":vite-spring-webmvc:dokkaHtmlPartial/main":[],":vite-spring-webmvc-jre8:dokkaHtmlPartial/main":[]}'

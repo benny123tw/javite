@@ -1,6 +1,17 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 
+module:javite-core
+com.javite.config
+com.javite.util
+module:javite-webmvc
+com.javite.spring.annotation
+com.javite.spring.config
+com.javite.spring.tags
+module:javite-webmvc-jre8
+com.javite.spring.annotation
+com.javite.spring.config
+com.javite.spring.tags
 module:vite-spring-webmvc
 io.github.benny123tw.servlet.annotation
 io.github.benny123tw.servlet.config
