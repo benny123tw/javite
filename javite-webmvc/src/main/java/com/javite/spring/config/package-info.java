@@ -1,9 +1,16 @@
 /**
- * This package contains the configuration classes for integrating Vite with Spring MVC applications.
+ * Provides an out-of-the-box configuration for integrating Vite with Spring MVC applications.
  *
- * <p>Classes in this package provide configuration and beans necessary for setting up Vite in a Spring MVC
- * application, including properties for the Vite manifest file, local development server URL, resource paths,
- * and debug settings.</p>
+ * <p>This configuration class defines beans and properties required for Vite integration, which can be customized
+ * through the application's {@code application.properties} file.</p>
+ *
+ * <p>The following properties can be configured:</p>
+ * <ul>
+ *     <li>{@code vite.debug} - Enables or disables debug mode for Vite integration. Default is {@code true}.</li>
+ *     <li>{@code vite.manifestPath} - Specifies the path to the Vite manifest file. Default is {@code /WEB-INF/dist/.vite/manifest.json}.</li>
+ *     <li>{@code vite.localServerUrl} - Specifies the URL of the local Vite development server. Default is {@code http://localhost:5173}.</li>
+ *     <li>{@code vite.resourcePath} - Specifies the path to Vite resources. Default is {@code /resources}.</li>
+ * </ul>
  *
  * <p>Usage example:</p>
  * <pre class="code">
@@ -15,6 +22,5 @@
  * </pre>
  *
  * @see com.javite.spring.annotation.EnableVite
- * @see com.javite.spring.config.ViteConfig
  */
 package com.javite.spring.config;
