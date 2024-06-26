@@ -1,26 +1,71 @@
 # JaVite
 
-This monorepo contains various submodules for integrating Vite with different frameworks and libraries, focusing on modernizing legacy web applications with Vite's fast build capabilities.
+Seamlessly Integrate Vite with Your Java Web Applications for a Modern Development Experience
 
-## Project Structure
+### Introduction
 
-The monorepo includes the following submodules:
+JaVite is a module designed to integrate Vite with Java web applications, focusing on legacy Spring
+MVC projects and Thymeleaf templates. It allows developers to modernize their front-end assets using
+Vite's powerful bundling capabilities while seamlessly incorporating these assets into traditional
+Java web applications.
 
-- **vite-spring-webmvc**: Integrates Vite with JSP and Spring MVC applications.
+### Features
 
-## Getting Started
+* Custom JSP tags for importing Vite-generated assets
+* Utility functions for managing asset imports
+* Support for both development and production environments
+* Configuration classes for seamless integration
+* Compatibility with legacy Spring MVC projects and Thymeleaf templates
+* Monorepo structure to support multiple modules and packages
 
-### Working with Submodules
+### Installation
 
-Each submodule has its own README file with specific instructions. Below is an overview of the
-submodules and how to work with them.
+To include JaVite in your project, add the following dependency to your `build.gradle` file:
 
-#### vite-spring-webmvc
+```groovy
+dependencies {
+    implementation 'com.javite:javite-webmvc:0.1.2'
+}
+```
 
-This submodule provides integration between Vite and Spring MVC applications, allowing you to use
-Vite-built assets in JSP views.
+For Maven, add the following to your `pom.xml`:
 
-- [Read the detailed README](vite-spring-webmvc/README.md) for setup and usage instructions.
+```xml
+
+<dependency>
+    <groupId>com.javite</groupId>
+    <artifactId>javite-webmvc</artifactId>
+    <version>0.1.2</version>
+</dependency>
+```
+
+### Usage
+
+#### JSP Integration
+
+1. Add the custom tag to your JSP files:
+
+    ```jsp
+    <%@ taglib prefix="vite" uri="https://javite.com/tags" %>
+    ```
+
+2. Use the custom tags to import Vite-generated assets:
+
+    ```jsp
+    <vite:import entry="/main.ts"/>
+    ```
+
+### Configuration
+
+JaVite uses a configuration class to determine the environment and asset paths. By default, it looks
+for your `application.properties` (or `application.yml`) file:
+
+```properties
+vite.debug=true
+vite.manifest-path=/WEB-INF/dist/.vite/manifest.json
+vite.local-server-url=http://localhost:5173
+vite.resource-path=/resources
+```
 
 ### Contributing
 
