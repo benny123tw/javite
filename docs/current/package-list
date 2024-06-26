@@ -2,7 +2,6 @@ $dokka.format:html-v1
 $dokka.linkExtension:html
 
 module:javite-core
-com.javite.config
 com.javite.util
 module:javite-webmvc
 com.javite.spring.annotation
