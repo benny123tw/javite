@@ -1,9 +1,11 @@
 package com.javite.spring.tags;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import static org.mockito.Mockito.contains;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
 import com.javite.config.ViteProperties;
-import com.javite.util.ManifestUtils;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.jsp.JspWriter;
 import jakarta.servlet.jsp.PageContext;
@@ -14,8 +16,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-
-import static org.mockito.Mockito.*;
 
 public class ViteImportTest {
 
@@ -56,7 +56,7 @@ public class ViteImportTest {
         viteImport.doTag();
 
         verify(jspWriter).print("<script type=\"module\" src=\"http://localhost:5173/@vite/client\"></script>");
-        verify(jspWriter).print("<script type=\"module\" src=\"main.js\"></script>");
+        verify(jspWriter).print("<script type=\"module\" src=\"http://localhost:5173/main.js\"></script>");
     }
 
     @Test

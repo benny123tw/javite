@@ -135,7 +135,7 @@ public class ViteImport extends SimpleTagSupport {
 
     private void handleDevEnvironment(JspWriter out, String localServerUrl) throws IOException {
         String viteClientScriptTag = HtmlUtils.generateScriptTag(localServerUrl + "/@vite/client");
-        String entryScriptTag = HtmlUtils.generateScriptTag(this.entry != null ? this.entry : "src/main.js");
+        String entryScriptTag = HtmlUtils.generateScriptTag(localServerUrl + "/" + entry);
 
         out.print(viteClientScriptTag);
         out.print(entryScriptTag);

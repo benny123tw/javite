@@ -9,13 +9,12 @@ import jakarta.servlet.jsp.JspException;
 import jakarta.servlet.jsp.JspWriter;
 import jakarta.servlet.jsp.PageContext;
 import jakarta.servlet.jsp.tagext.SimpleTagSupport;
+import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-
-import java.io.IOException;
 
 /**
  * Custom JSP tag to import Vite-generated assets.
@@ -136,7 +135,7 @@ public class ViteImport extends SimpleTagSupport {
 
     private void handleDevEnvironment(JspWriter out, String localServerUrl) throws IOException {
         String viteClientScriptTag = HtmlUtils.generateScriptTag(localServerUrl + "/@vite/client");
-        String entryScriptTag = HtmlUtils.generateScriptTag(this.entry != null ? this.entry : "src/main.js");
+        String entryScriptTag = HtmlUtils.generateScriptTag(localServerUrl + "/" + entry);
 
         out.print(viteClientScriptTag);
         out.print(entryScriptTag);
