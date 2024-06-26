@@ -1,12 +1,11 @@
 package com.javite.spring.config;
 
-import com.javite.config.ViteProperties;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = ViteConfigTest.TestConfig.class)
 public class ViteConfigTest {

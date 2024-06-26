@@ -1,7 +1,7 @@
 package com.javite.spring.tags;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.javite.config.ViteProperties;
+import com.javite.spring.config.ViteProperties;
 import com.javite.util.HtmlUtils;
 import com.javite.util.ManifestUtils;
 import java.io.IOException;

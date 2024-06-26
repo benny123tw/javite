@@ -1,8 +1,8 @@
 package com.javite.spring.config;
 
-import com.javite.config.ViteProperties;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -31,6 +31,7 @@ import org.springframework.context.annotation.Configuration;
  * @see com.javite.spring.annotation.EnableVite
  */
 @Configuration
+@ComponentScan(basePackages = "com.javite.spring.config")
 public class ViteConfig {
 
     @Value("${vite.debug:true}")

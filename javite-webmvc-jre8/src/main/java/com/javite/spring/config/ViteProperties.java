@@ -1,15 +1,17 @@
-package com.javite.config;
+package com.javite.spring.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 /**
  * Configuration properties for integrating Vite with Java web applications.
  *
  * <p>This class provides properties that can be used to configure the Vite integration,
- * including settings for the Vite manifest file, local development server URL, resource paths,
- * and debug mode.</p>
+ * including settings for the Vite manifest file, local development server URL, resource paths, and debug mode.</p>
  *
  * <p>These properties can be configured in the application's configuration file (e.g., `application.properties`
- * or `application.yml` for Spring applications) and are typically used by integration modules to
- * facilitate the setup and use of Vite in Java web applications.</p>
+ * or `application.yml` for Spring applications) and are typically used by integration modules to facilitate the setup and use of Vite in Java web
+ * applications.</p>
  *
  * <p>Usage example:</p>
  * <pre class="code">
@@ -19,6 +21,8 @@ package com.javite.config;
  * vite.resourcePath=/resources
  * </pre>
  */
+@Component
+@ConfigurationProperties(prefix = "vite")
 public class ViteProperties {
 
     /**
@@ -116,4 +120,5 @@ public class ViteProperties {
     public void setResourcePath(String resourcePath) {
         this.resourcePath = resourcePath;
     }
+
 }

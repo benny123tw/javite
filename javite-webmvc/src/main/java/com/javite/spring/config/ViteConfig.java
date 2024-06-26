@@ -1,9 +1,9 @@
 package com.javite.spring.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.javite.config.ViteProperties;
 
 /**
  * Configuration class for integrating Vite with Spring MVC applications.
@@ -12,6 +12,7 @@ import com.javite.config.ViteProperties;
  * {@code application.properties} file.</p>
  */
 @Configuration
+@EnableConfigurationProperties(ViteProperties.class)
 public class ViteConfig {
 
     @Value("${vite.debug:true}")

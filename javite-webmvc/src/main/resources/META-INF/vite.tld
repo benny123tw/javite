@@ -7,7 +7,7 @@
     <description>Vite JSP Tag Library</description>
     <tlib-version>1.0</tlib-version>
     <short-name>vite</short-name>
-    <uri>https://javite.com</uri>
+    <uri>https://javite.com/tags</uri>
 
     <tag>
         <description>Import a Vite asset.</description>

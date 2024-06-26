@@ -7,6 +7,10 @@
     <description>Vite JSP Tag Library</description>
     <short-name>vite</short-name>
     <tag>
+        <description>Import a Vite asset.</description>
+        <name>import</name>
+        <tag-class>com.javite.spring.tags.ViteImport</tag-class>
+        <body-content>empty</body-content>
         <attribute>
             <description>The entry point of the Vite asset to be imported.</description>
             <name>entry</name>
@@ -37,10 +41,6 @@
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
-        <body-content>empty</body-content>
-        <description>Import a Vite asset.</description>
-        <name>import</name>
-        <tag-class>com.javite.spring.tags.ViteImport</tag-class>
     </tag>
     <tlib-version>1.0</tlib-version>
 
