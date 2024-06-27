@@ -24,7 +24,7 @@ To include JaVite in your project, add the following dependency to your `build.g
 
 ```groovy
 dependencies {
-    implementation 'com.javite:javite-webmvc:0.1.2'
+    implementation 'com.javite:javite-webmvc:0.1.3'
 }
 ```
 
@@ -35,7 +35,7 @@ For Maven, add the following to your `pom.xml`:
 <dependency>
     <groupId>com.javite</groupId>
     <artifactId>javite-webmvc</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
