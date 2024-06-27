@@ -1,22 +1,30 @@
-# JaVite
+<p align="center">
+  <a href="https://javite.com" target="_blank" rel="noopener noreferrer">
+    <img width="60" src="https://javite.com/Duke.svg" alt="JaVite logo">
+  </a>
+</p>
+<br/>
+<p align="center">
+  <a href="https://central.sonatype.com/artifact/com.javite/javite-webmvc"><img src="https://img.shields.io/maven-central/v/com.javite/javite-webmvc.svg" alt="Maven Central"></a>
+  <a href="https://github.com/benny123tw/javite/actions/workflows/1.pipeline.yml"><img src="https://github.com/benny123tw/javite/actions/workflows/1.pipeline.yml/badge.svg?branch=main" alt="Build Status"></a>
+  <a href="https://benny123tw.github.io/javite/docs/current"><img src="https://img.shields.io/badge/JavaDoc-Online-green" alt="Javadoc"></a>
+</p>
+<br/>
 
-Seamlessly Integrate Vite with Your Java Web Applications for a Modern Development Experience
+# JaVite ⚡
 
-### Introduction
+> Seamlessly Integrate Vite with Your Java Web Applications
 
-JaVite is a module designed to integrate Vite with Java web applications, focusing on legacy Spring
-MVC projects and Thymeleaf templates. It allows developers to modernize their front-end assets using
-Vite's powerful bundling capabilities while seamlessly incorporating these assets into traditional
-Java web applications.
+- 🌐 Custom JSP tags for Vite assets
+- ⚙️ Asset import utilities
+- 🔄 Dev and prod support
+- 📁 Seamless configuration
+- 💻 Spring MVC (JSP & Thymeleaf) support
 
-### Features
-
-* Custom JSP tags for importing Vite-generated assets
-* Utility functions for managing asset imports
-* Support for both development and production environments
-* Configuration classes for seamless integration
-* Compatibility with legacy Spring MVC projects and Thymeleaf templates
-* Monorepo structure to support multiple modules and packages
+JaVite (pronounced "jah-vite") is a module designed to integrate Vite with Java web applications,
+focusing on legacy Spring MVC projects and Thymeleaf templates. It allows developers to modernize
+their front-end assets using Vite's powerful bundling capabilities while seamlessly incorporating
+these assets into traditional Java web applications.
 
 ### Installation
 
@@ -31,7 +39,6 @@ dependencies {
 For Maven, add the following to your `pom.xml`:
 
 ```xml
-
 <dependency>
     <groupId>com.javite</groupId>
     <artifactId>javite-webmvc</artifactId>
@@ -84,3 +91,5 @@ This project was inspired by the following resources:
 - [Spring Framework](https://spring.io/projects/spring-framework)
 - [Vite](https://vitejs.dev/)
 - [Gradle](https://gradle.org/)
+
+For more detailed documentation, please visit [JaVite Documentation](https://javite.com/).
