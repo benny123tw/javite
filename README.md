@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://javite.com" target="_blank" rel="noopener noreferrer">
-    <img width="60" src="https://javite.com/Duke.svg" alt="JaVite logo">
+    <img width="60" src="https://javite.com/duke_wave.svg" alt="JaVite logo">
   </a>
 </p>
 <br/>
