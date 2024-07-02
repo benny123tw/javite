@@ -12,8 +12,6 @@
             <option value="$PROJECT_DIR$/javite-core" />
             <option value="$PROJECT_DIR$/javite-webmvc" />
             <option value="$PROJECT_DIR$/javite-webmvc-jre8" />
-            <option value="$PROJECT_DIR$/vite-spring-webmvc" />
-            <option value="$PROJECT_DIR$/vite-spring-webmvc-jre8" />
           </set>
         </option>
       </GradleProjectSettings>

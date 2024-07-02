@@ -8,7 +8,7 @@ plugins {
 }
 
 description = "Java library for Vite integration."
-group = "io.github.benny123tw"
+group = "com.javite"
 
 allprojects {
     repositories {
