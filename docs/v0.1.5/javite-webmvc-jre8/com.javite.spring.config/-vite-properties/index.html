@@ -1,0 +1,187 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ViteProperties</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            javite
+                    </a>            </div>
+            <div class="library-version">0.1.5
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":javite-webmvc-jre8:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="javite-webmvc-jre8::com.javite.spring.config/ViteProperties///PointingToDeclaration//-2023082920">
+  <div class="breadcrumbs"><a href="../../index.html">javite-webmvc-jre8</a><span class="delimiter">/</span><a href="../index.html">com.javite.spring.config</a><span class="delimiter">/</span><span class="current">ViteProperties</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Vite</span><wbr><span><span>Properties</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":javite-webmvc-jre8:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.springframework.stereotype/Component///PointingToDeclaration/"><span class="token annotation builtin">Component</span></span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.springframework.boot.context.properties/ConfigurationProperties///PointingToDeclaration/"><span class="token annotation builtin">ConfigurationProperties</span></span><span class="token punctuation">(</span><span>prefix<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"vite"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">ViteProperties</a></div><p class="paragraph">Configuration properties for integrating Vite with Java web applications. </p><p class="paragraph">This class provides properties that can be used to configure the Vite integration, including settings for the Vite manifest file, local development server URL, resource paths, and debug mode.</p><p class="paragraph">These properties can be configured in the application's configuration file (e.g., `application.properties` or `application.yml` for Spring applications) and are typically used by integration modules to facilitate the setup and use of Vite in Java web applications.</p><p class="paragraph">Usage example:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">vite.debug=true
+vite.manifestPath=/WEB-INF/dist/.vite/manifest.json
+vite.localServerUrl=http://localhost:5173
+vite.resourcePath=/resources
+</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="747470304%2FConstructors%2F-2023082920" anchor-label="ViteProperties" id="747470304%2FConstructors%2F-2023082920" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":javite-webmvc-jre8:dokkaHtmlPartial/main" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vite-properties.html"><span>Vite</span><wbr><span><span>Properties</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="747470304%2FConstructors%2F-2023082920"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":javite-webmvc-jre8:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1373066762%2FProperties%2F-2023082920" anchor-label="localServerUrl" id="-1373066762%2FProperties%2F-2023082920" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":javite-webmvc-jre8:dokkaHtmlPartial/main" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="local-server-url.html"><span>local</span><wbr><span>Server</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1373066762%2FProperties%2F-2023082920"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":javite-webmvc-jre8:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="local-server-url.html">localServerUrl</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a></div><div class="brief ">The local server URL for Vite development.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1314591971%2FProperties%2F-2023082920" anchor-label="manifestPath" id="1314591971%2FProperties%2F-2023082920" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":javite-webmvc-jre8:dokkaHtmlPartial/main" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="manifest-path.html"><span>manifest</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1314591971%2FProperties%2F-2023082920"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":javite-webmvc-jre8:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="manifest-path.html">manifestPath</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a></div><div class="brief ">The path of the manifest file generated by Vite.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-469360796%2FProperties%2F-2023082920" anchor-label="resourcePath" id="-469360796%2FProperties%2F-2023082920" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":javite-webmvc-jre8:dokkaHtmlPartial/main" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resource-path.html"><span>resource</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-469360796%2FProperties%2F-2023082920"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":javite-webmvc-jre8:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="resource-path.html">resourcePath</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a></div><div class="brief ">The path to the resources.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1508962630%2FFunctions%2F-2023082920" anchor-label="isDebug" id="-1508962630%2FFunctions%2F-2023082920" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":javite-webmvc-jre8:dokkaHtmlPartial/main" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-debug.html"><span>is</span><wbr><span><span>Debug</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1508962630%2FFunctions%2F-2023082920"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":javite-webmvc-jre8:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-debug.html"><span class="token function">isDebug</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief ">Returns whether debug mode is enabled.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="850682100%2FFunctions%2F-2023082920" anchor-label="setDebug" id="850682100%2FFunctions%2F-2023082920" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":javite-webmvc-jre8:dokkaHtmlPartial/main" data-filterable-set=":javite-webmvc-jre8:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-debug.html"><span>set</span><wbr><span><span>Debug</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="850682100%2FFunctions%2F-2023082920"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":javite-webmvc-jre8:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-debug.html"><span class="token function">setDebug</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">debug<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Sets whether debug mode is enabled.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
