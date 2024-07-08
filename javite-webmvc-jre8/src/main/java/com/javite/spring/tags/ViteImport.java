@@ -10,8 +10,6 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -26,8 +24,6 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  * @since 0.1.0
  */
 public class ViteImport extends SimpleTagSupport {
-
-    private static final Logger log = LoggerFactory.getLogger(ViteImport.class);
 
     @Nullable
     private String entry;
@@ -102,7 +98,6 @@ public class ViteImport extends SimpleTagSupport {
         JspWriter out = getJspContext().getOut();
 
         if (ctx == null) {
-            log.error("No WebApplicationContext found");
             throw new JspException("No WebApplicationContext found");
         }
 
@@ -128,7 +123,6 @@ public class ViteImport extends SimpleTagSupport {
             printJsImport(out, servletContext, entryNode, resourcePath);
             printCssImports(out, servletContext, entryNode, resourcePath);
         } else {
-            log.error("Entry not found in manifest: {}", entry);
             throw new IOException("Entry not found in manifest: " + entry);
         }
     }
