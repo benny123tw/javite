@@ -65,7 +65,7 @@ object Meta {
     const val DESC = "Java Vite Core Library"
     const val LICENSE = "MIT"
     const val LICENSE_URL = "https://opensource.org/licenses/mit"
-    const val GITHUB_REPO = "benny123tw/javite"
+    const val GITHUB_REPO = "javite-projects/javite"
     const val DEVELOPER_ID = "benny123tw"
     const val DEVELOPER_NAME = "Benny Yen"
     const val DEVELOPER_ORGANIZATION = "com.javite"

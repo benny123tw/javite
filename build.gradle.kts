@@ -40,11 +40,11 @@ object Meta {
     const val DESC = "Java library for Vite integration."
     const val LICENSE = "MIT"
     const val LICENSE_URL = "https://opensource.org/licenses/mit"
-    const val GITHUB_REPO = "benny123tw/javite"
+    const val GITHUB_REPO = "javite-projects/javite"
     const val DEVELOPER_ID = "benny123tw"
     const val DEVELOPER_NAME = "Benny Yen"
-    const val DEVELOPER_ORGANIZATION = "io.github.benny123tw"
-    const val DEVELOPER_ORGANIZATION_URL = "https://www.github.com/benny123tw"
+    const val DEVELOPER_ORGANIZATION = "com.javite"
+    const val DEVELOPER_ORGANIZATION_URL = "https://javite.com"
 }
 
 mavenPublishing {
